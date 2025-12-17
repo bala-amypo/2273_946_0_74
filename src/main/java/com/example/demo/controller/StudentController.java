@@ -11,22 +11,24 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.Student;
 import com.example.demo.service.StudentService;
 
-
 @RestController
 public class StudentController {
-  @Autowired 
-  StudentService ser;
-  @PostMapping("/adddata")
-    public Student createData(@RequestBody Student stu){
-        return  ser.createData(stu);
-}
-@GetMapping("/fetchrecord")
-public List<Student> fetchRecord() {
-    return ser.fetchRecord();
-}
 
-@GetMapping("/fetchdatabyid/{id}")
-public Optional<Student> fetchDataById(@PathVariable long id){
-return ser.fetchDataById(id);
-}
+    @Autowired
+    StudentService ssr;
+
+    @PostMapping("/adddata")
+    public Student createData(@RequestBody Student stu) {
+        return ssr.createData(stu);
+    }
+
+    @GetMapping("/getdata")
+    public List<Student> fetchRecord() {   
+        return ssr.fetchRecord();
+    }
+    @GetMapping("/fetchdatabyid/{id}")
+    public Optional<Student> fetchDataById(@PathVariable int id){
+        return ser.fetchDataById();
+
+    }
 }
