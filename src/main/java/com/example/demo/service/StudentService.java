@@ -1,3 +1,5 @@
+main ? java com example / demo /setvice / tudente
+
 package com.example.demo.service;
 
 import java.util.List;
@@ -7,3 +9,5 @@ public interface StudentService (
 
 Student createData(Student stu);
 List<Student> fetchRecord();
+
+...
