@@ -1,7 +1,10 @@
 package com.example.demo.entity;
 
-import jakarta.persistance.*;
+import jakarta.persistance.Entity;
+import jakarta.persistance.Id;
+@Entity
 public class Student{
+    @Id
     private long id;
     private String name;
     private String email;
