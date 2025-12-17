@@ -25,3 +25,6 @@ I
 // Fetch all records
 public List<Student> fetchRecord() {
 return repo.findA11();
+}
+}
+}
