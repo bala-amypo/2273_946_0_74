@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 public class Student {
 
     @Id
-    private Long id;
+    private int id;
     private String name;
     private String email;
     private float cgpa;
@@ -15,7 +15,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long id, String name, String email, float cgpa) {
+    public Student(int id, String name, String email, float cgpa) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -26,7 +26,7 @@ public class Student {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
