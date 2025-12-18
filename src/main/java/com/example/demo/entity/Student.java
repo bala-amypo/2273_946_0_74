@@ -22,7 +22,7 @@ public class Student {
         this.cgpa = cgpa;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
